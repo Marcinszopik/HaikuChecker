@@ -13,23 +13,23 @@ $(document).ready(function() {
     var thirdLine = $("#line-three").text();
     console.log(textHaiku);
 
-    var myHaiku=new Haiku(textHaiku, firstLine, secondLine, thirdLine);
+    var myHaiku=new Haiku(textHaiku);
 
 
-    let numberOfVowels=0;
-    // numberOfVowels+=myHaiku.LocateFirstLineSyllables();
-    // numberOfVowels+=myHaiku.LocateSecondLineSyllables();
-    numberOfVowels+=myHaiku.LocateNumberOfSyllables();
+    let numberOfSyllables=0;
+    // numberOfSyllables+=myHaiku.LocateFirstLineSyllables();
+    // numberOfSyllables+=myHaiku.LocateSecondLineSyllables();
+    numberOfSyllables+=myHaiku.LocateNumberOfSyllables();
 
 
   $("button#verify-haiku").click(function(event) {
-    if (numberOfVowels == 17) {
-      $("#result").text("DEFINITELY A HAIKU! There are " + numberOfVowels + " syllables");
+    if (numberOfSyllables == 17) {
+      $("#result").text("DEFINITELY A HAIKU! There are " + numberOfSyllables + " syllables");
     } else {
-      $("#result").text("NOT AN HAIKU! There are " + numberOfVowels + " syllables");
+      $("#result").text("NOT AN HAIKU! There are " + numberOfSyllables + " syllables");
     }
 
-    console.log(numberOfVowels);
+    console.log(numberOfSyllables);
   });
 
 
