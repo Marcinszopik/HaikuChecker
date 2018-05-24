@@ -15,7 +15,7 @@ export class Haiku {
       let numberOfVowels=0;
         // counts vowels
       for (var i =0; i < characterArr.length; i++) {
-        if (characterArr[i] == "e" && characterArr[i+1]== " " && (characterArr[i-1] == "h" || characterArr[i-1] == "l") || (characterArr[i] == "u" && characterArr[i+1]== "e")) {
+        if (characterArr[i] == "e" && characterArr[i+1]== " " && (characterArr[i-1] == "h" || characterArr[i-1] == "l" || characterArr[i-1] == "i") || (characterArr[i] == "u" && characterArr[i+1]== "e")) {
           numberOfVowels += 1;
         }
         else if (characterArr[i] == "e" && (characterArr[i+1] == " " || characterArr[i+1] =="s")) {
