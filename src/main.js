@@ -1,7 +1,4 @@
-//
-// import { LocateFirstLineSyllables } from './haiku.js';
-// import { LocateSecondLineSyllables } from './haiku.js';
-// import { LocateThirdLineSyllables }  from './haiku.js';
+
 import { Haiku } from './haiku.js';
 
 import './styles.css';
@@ -20,16 +17,16 @@ $(document).ready(function() {
 
 
     let numberOfVowels=0;
-    numberOfVowels+=myHaiku.LocateFirstLineSyllables();
-    numberOfVowels+=myHaiku.LocateSecondLineSyllables();
-    numberOfVowels+=myHaiku.LocateThirdLineSyllables();
+    // numberOfVowels+=myHaiku.LocateFirstLineSyllables();
+    // numberOfVowels+=myHaiku.LocateSecondLineSyllables();
+    numberOfVowels+=myHaiku.LocateNumberOfSyllables();
 
 
   $("button#verify-haiku").click(function(event) {
-    if (numberOfVowels > 17) {
-      $("#result").text("NOT AN HAIKU!");
+    if (numberOfVowels == 17) {
+      $("#result").text("DEFINITELY A HAIKU! There are " + numberOfVowels + " syllables");
     } else {
-      $("#result").text("DEFINITELY A HAIKU!");
+      $("#result").text("NOT AN HAIKU! There are " + numberOfVowels + " syllables");
     }
 
     console.log(numberOfVowels);
